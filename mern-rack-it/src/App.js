@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { Link, Route, Switch, Redirect } from "react-router-dom";
+import "./App.css";
+import Home from "./Home";
+import Exercises from "./Exercises";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      exercises: null
+    };
+    // this.setExercises = this.setExercises.bind(this);
+  }
+
+  render() {
+    return (
+      <div>
+        <nav>
+          <input
+            class="form-control"
+            id="search"
+            type="text"
+            placeholder="search"
+          />
+          <button type="button" id="single" class="btn btn-primary">
+            Search
+          </button>
+        </nav>
+        <main>
+          <Switch>
+            <Route path="/" exact component={Home} />
+          </Switch>
+        </main>
+      </div>
+    );
+  }
 }
 
 export default App;
