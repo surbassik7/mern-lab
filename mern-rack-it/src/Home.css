@@ -1,0 +1,11 @@
+div {
+  padding: 18px;
+  margin: 20px;
+  background-color: #282c34;
+  display: flex;
+  flex-direction: row;
+  align-items: space-around;
+  justify-content: flex-start;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}

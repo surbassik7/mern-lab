@@ -21,15 +21,10 @@ class App extends Component {
       <div>
         <nav>
           <Link to="/">
-            <img src="src/img/Warrior-Logo.png" alt="" />
+            <img src="./img/Warrior-Logo.png" alt="Home" />
           </Link>
-          <input
-            class="form-control"
-            id="search"
-            type="text"
-            placeholder="search"
-          />
-          <button type="button" id="single" class="btn btn-primary">
+          <input id="search" type="text" placeholder="search" />
+          <button type="button" id="single">
             Search
           </button>
 
